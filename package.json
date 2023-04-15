@@ -1,0 +1,32 @@
+{
+  "name": "test-migration",
+  "version": "1.0.0",
+  "description": "a collection of smart contracts and scripts to test Uniswap migration to Rootstock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitcoinolympics/test-migration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitcoinolympics/test-migration/issues"
+  },
+  "homepage": "https://github.com/bitcoinolympics/test-migration#readme",
+  "devDependencies": {
+    "@tenderly/hardhat-tenderly": "^1.7.1",
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.15.11",
+    "hardhat": "^2.13.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3",
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.3"
+  }
+}
