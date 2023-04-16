@@ -31,22 +31,11 @@ contract DirectSwapOnPool is IUniswapV3SwapCallback {
 
     function directSwap(bool zeroForOne, int256 amount) external payable returns (int256 amount0, int256 amount1) {
 
-        // (bool success, bytes memory data) =
-        //     rDOC.call(abi.encodeWithSelector(IERC20.transferFrom.selector, msg.sender, address(this), amount));
-        // require(success && (data.length == 0 || abi.decode(data, (bool))), 'STF');
+        ( bool success, bytes memory data) =
+            msg.sender.call(abi.encodeWithSelector(IERC20.approve.selector, address(this), amount));
+        require(success && (data.length == 0 || abi.decode(data, (bool))), 'STF');
 
-        // (success, data) = rDOC.call(abi.encodeWithSelector(IERC20.approve.selector, address(pool), amount));
-        // require(success && (data.length == 0 || abi.decode(data, (bool))), 'SA');
-
-        // ( bool success, bytes memory data) =
-        //     msg.sender.call(abi.encodeWithSelector(IERC20.approve.selector, address(this), amount));
-        // require(success && (data.length == 0 || abi.decode(data, (bool))), 'STF');
-
-        // (success, data) =
-        //     SOV.call(abi.encodeWithSelector(IERC20.transferFrom.selector, msg.sender, address(this), amount));
-        // require(success && (data.length == 0 || abi.decode(data, (bool))), 'STF');
-
-        (bool success, bytes memory data) = SOV.call(abi.encodeWithSelector(IERC20.approve.selector, address(pool), amount));
+        ( success, data) = SOV.call(abi.encodeWithSelector(IERC20.approve.selector, address(pool), amount));
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'SA');
 
         bytes memory callbackData = abi.encodePacked(SOV, feeTier, rDOC);
@@ -62,12 +51,12 @@ contract DirectSwapOnPool is IUniswapV3SwapCallback {
         emit CallbackReceived(amount0Delta, amount1Delta, msg.sender);
         (address token0, uint24 fee, address token1) = abi.decode(data, (address, uint24, address));
         emit Decoded(token0, fee, token1);
-        // if (amount0Delta > 0)
-        //     IERC20(IUniswapV3Pool(msg.sender).token0()).transferFrom(owner, msg.sender, uint256(amount0Delta));
-        // else IERC20(IUniswapV3Pool(msg.sender).token0()).transferFrom(msg.sender, owner, uint256(amount0Delta));
-        // if (amount1Delta > 0)
-        //     IERC20(IUniswapV3Pool(msg.sender).token1()).transferFrom(owner, msg.sender, uint256(amount1Delta));
-        // else IERC20(IUniswapV3Pool(msg.sender).token1()).transferFrom(msg.sender, owner, uint256(amount1Delta));
+        if (amount0Delta > 0)
+            IERC20(IUniswapV3Pool(msg.sender).token0()).transferFrom(owner, msg.sender, uint256(amount0Delta));
+        else IERC20(IUniswapV3Pool(msg.sender).token0()).transferFrom(msg.sender, owner, uint256(amount0Delta));
+        if (amount1Delta > 0)
+            IERC20(IUniswapV3Pool(msg.sender).token1()).transferFrom(owner, msg.sender, uint256(amount1Delta));
+        else IERC20(IUniswapV3Pool(msg.sender).token1()).transferFrom(msg.sender, owner, uint256(amount1Delta));
     }
 
 }

@@ -20,6 +20,19 @@ module.exports = {
       chainId: 31,
       url: "https://public-node.testnet.rsk.co",
     },
+    rsk_local: {
+      chainId: 33,
+      url: "http://localhost:4444",
+    },
   },
-  solidity: "0.8.18",
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.18",
+      },
+      {
+        version: "0.4.18",
+      },
+    ],
+  },
 };
