@@ -1,0 +1,37 @@
+{
+  "name": "RSK Testnet Token List",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "logoURI": "https://raw.githubusercontent.com/plasmadlt/token-list/master/assets/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png",
+  "keywords": ["rsk", "rootstock", "tokens"],
+  "timestamp": "2023-06-27T20:37:00.000+00:00",
+  "tokens": [
+    {
+      "name": "RIF",
+      "address": "0x19F64674D8A5B4E652319F5e239eFd3bc969A1fE",
+      "symbol": "tRIF",
+      "decimals": 18,
+      "chainId": 31,
+      "logoURI": "https://github.com/rsksmart/rsk-contract-metadata/blob/42e47ceef93d7ac00c0106686649f92627db15fd/images/rif.png"
+    },
+    {
+      "name": "Sovryn Token",
+      "address": "0x6a9A07972D07e58F0daf5122d11E069288A375fb",
+      "symbol": "tSOV",
+      "decimals": 18,
+      "chainId": 31,
+      "logoURI": "https://github.com/rsksmart/rsk-contract-metadata/blob/42e47ceef93d7ac00c0106686649f92627db15fd/images/sov.png"
+    },
+    {
+      "name": "RIF Dollar on Chain",
+      "address": "0xC3De9F38581f83e281f260d0DdbaAc0e102ff9F8",
+      "symbol": "RDOC",
+      "decimals": 18,
+      "chainId": 31,
+      "logoURI": "https://github.com/rsksmart/rsk-contract-metadata/blob/42e47ceef93d7ac00c0106686649f92627db15fd/images/rdoc.png"
+    }
+  ]
+}

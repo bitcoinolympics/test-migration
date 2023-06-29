@@ -1,0 +1,16 @@
+{
+  "v3CoreFactoryAddress": "0x645eaefA3dfE93b6140e4AB68113f56Fb1910Ca8",
+  "multicall2Address": "0x26438b854c7E20B905C9ff813A09aDeF2935fd77",
+  "proxyAdminAddress": "0xF50424203bb664733551285E6033646D27DBf132",
+  "tickLensAddress": "0xC42e8977Ea5d89b58FEea41a06b36b464B336305",
+  "nftDescriptorLibraryAddressV1_3_0": "0xf5a34f0Ad2edd6c8Dedd8B2bc0e1caC86531Fea3",
+  "nonfungibleTokenPositionDescriptorAddressV1_3_0": "0x9D5591FCA485538C775E0b78E30Cb1669a84cB9f",
+  "descriptorProxyAddress": "0x57Fe29128a175bdD0ADE7835eCAad78E27CF976f",
+  "nonfungibleTokenPositionManagerAddress": "0x650824EaddD2d12cb918286b1B2Dd9F66726961d",
+  "v3MigratorAddress": "0x06D506B4ad54d2f91B1ec1A8581E6e8b02b3B63e",
+  "v3StakerAddress": "0x02A5CDFa2c24a94cffd2B448B58fd98fc3e444eD",
+  "quoterV2Address": "0x6eC3Ffa48ec1fE11411395A0BC8C25a1cebAA8C6",
+  "swapRouter02": "0xE9990801ABBCE8Ec4A1f0b12Ea2d972d6401959e",
+  "UniswapV3Pool": "0x26c2A53fEf9ff15f246568d31aE7dAae5C56Dc4c",
+  "quoterAddress": "0x2E02F710352AAaE3111A412Cc2fF4541D00E042E"
+}
